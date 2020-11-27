@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q7E-tN-LfM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="rhP-E0-8UF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q7E-tN-LfM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vhe-T6-in3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1Gi-mh-vNe" kind="relationship" relationship="rootViewController" id="k7M-pO-dWR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7cz-WH-8Qb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="57.589285714285708"/>
+        </scene>
+        <!--Clients ListVC-->
+        <scene sceneID="DSe-10-2ls">
+            <objects>
+                <viewController storyboardIdentifier="ClientsListVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1Gi-mh-vNe" customClass="ClientsListVC" customModule="SworksStory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="loe-98-qtp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eZS-tE-rOu">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="1Gi-mh-vNe" id="2xK-Fv-k00"/>
+                                    <outlet property="delegate" destination="1Gi-mh-vNe" id="3RG-3f-VG9"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5RX-mR-Ewh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eZS-tE-rOu" firstAttribute="top" secondItem="5RX-mR-Ewh" secondAttribute="top" id="6DZ-6c-ANm"/>
+                            <constraint firstItem="5RX-mR-Ewh" firstAttribute="trailing" secondItem="eZS-tE-rOu" secondAttribute="trailing" id="899-1O-5Tc"/>
+                            <constraint firstItem="eZS-tE-rOu" firstAttribute="leading" secondItem="5RX-mR-Ewh" secondAttribute="leading" id="WCq-Ky-OuF"/>
+                            <constraint firstItem="5RX-mR-Ewh" firstAttribute="bottom" secondItem="eZS-tE-rOu" secondAttribute="bottom" id="xVg-f5-yUa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="LOy-7M-rIC"/>
+                    <connections>
+                        <outlet property="tableView" destination="eZS-tE-rOu" id="qna-lf-dvF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3T8-MH-FcZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="943" y="58"/>
+        </scene>
+        <!--MapsVC-->
+        <scene sceneID="Zcc-rT-Wkk">
+            <objects>
+                <viewController storyboardIdentifier="MapsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7iw-jF-zOQ" customClass="MapsVC" customModule="SworksStory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="02V-9C-VQx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0iQ-Ns-kV3">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <connections>
+                                    <outlet property="delegate" destination="7iw-jF-zOQ" id="qu3-eu-FeP"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mFT-CF-1mc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mFT-CF-1mc" firstAttribute="bottom" secondItem="0iQ-Ns-kV3" secondAttribute="bottom" id="Ejl-XH-zYQ"/>
+                            <constraint firstItem="0iQ-Ns-kV3" firstAttribute="top" secondItem="mFT-CF-1mc" secondAttribute="top" id="RhS-Kv-een"/>
+                            <constraint firstItem="mFT-CF-1mc" firstAttribute="trailing" secondItem="0iQ-Ns-kV3" secondAttribute="trailing" id="fJr-IV-5Mb"/>
+                            <constraint firstItem="0iQ-Ns-kV3" firstAttribute="leading" secondItem="mFT-CF-1mc" secondAttribute="leading" id="n2I-ym-IoI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="0iQ-Ns-kV3" id="iuG-3s-7To"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aqJ-3C-bGS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1930" y="58"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

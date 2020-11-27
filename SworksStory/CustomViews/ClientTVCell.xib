@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="ClientTVCell" selectionStyle="default" indentationWidth="10" rowHeight="159" id="KGk-i7-Jjw" customClass="ClientTVCell" customModule="SworksStory" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="502" height="159"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="502" height="159"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" restorationIdentifier="CustomTVCellCV" translatesAutoresizingMaskIntoConstraints="NO" id="80f-gN-YkV" customClass="CustomTVCellCV" customModule="SworksStory" customModuleProvider="target">
+                        <rect key="frame" x="8" y="8" width="486" height="143"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRz-CX-K7i">
+                                <rect key="frame" x="8" y="8" width="45" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" red="0.13102978470000001" green="0.19103330369999999" blue="0.31441688540000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="6zv-kD-l10">
+                                <rect key="frame" x="8" y="37" width="10" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="UqR-e2-2zI"/>
+                                    <constraint firstAttribute="width" constant="10" id="s9c-yT-5ug"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4UC-u7-mc4">
+                                <rect key="frame" x="22" y="34" width="30" height="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" red="0.39995324609999999" green="0.40002685789999998" blue="0.39994865660000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="DeliveryReturnBtn" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kNm-r9-lFT" customClass="DeliveryReturnBtn" customModule="SworksStory" customModuleProvider="target">
+                                <rect key="frame" x="8" y="85" width="470" height="50"/>
+                                <color key="backgroundColor" red="0.28404995799999999" green="0.39779484269999998" blue="0.43325999380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="vzI-pY-Cbv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="DELIVERY/RETURN">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onDevlieryReturn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Pm2-nG-hML"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVI-48-1JQ">
+                                <rect key="frame" x="453" y="8" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="TTi-QU-Y2P"/>
+                                    <constraint firstAttribute="width" constant="25" id="dxP-gC-d7j"/>
+                                </constraints>
+                                <state key="normal" image="phone-call"/>
+                                <connections>
+                                    <action selector="onCall:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="k9b-fd-3Yv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bkq-o6-IGu">
+                                <rect key="frame" x="420" y="8" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="7cN-3g-KeH"/>
+                                    <constraint firstAttribute="width" constant="25" id="pFd-ou-bcp"/>
+                                </constraints>
+                                <state key="normal" image="maps"/>
+                                <connections>
+                                    <action selector="onMaps:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Bu1-Sg-rzf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4UC-u7-mc4" firstAttribute="leading" secondItem="6zv-kD-l10" secondAttribute="trailing" constant="4" id="AbQ-b5-Wao"/>
+                            <constraint firstItem="kNm-r9-lFT" firstAttribute="leading" secondItem="6zv-kD-l10" secondAttribute="leading" id="EKL-23-ozg"/>
+                            <constraint firstItem="kNm-r9-lFT" firstAttribute="top" secondItem="4UC-u7-mc4" secondAttribute="bottom" constant="37" id="LYk-tJ-kMy"/>
+                            <constraint firstItem="EVI-48-1JQ" firstAttribute="top" secondItem="Bkq-o6-IGu" secondAttribute="top" id="SQu-Ni-kBB"/>
+                            <constraint firstItem="4UC-u7-mc4" firstAttribute="bottom" secondItem="6zv-kD-l10" secondAttribute="bottom" constant="1" id="W9k-oW-8Mt"/>
+                            <constraint firstItem="6zv-kD-l10" firstAttribute="leading" secondItem="nRz-CX-K7i" secondAttribute="leading" id="WDI-gm-87U"/>
+                            <constraint firstItem="6zv-kD-l10" firstAttribute="top" secondItem="nRz-CX-K7i" secondAttribute="bottom" constant="8" id="YbK-K3-mNM"/>
+                            <constraint firstAttribute="bottom" secondItem="kNm-r9-lFT" secondAttribute="bottom" constant="8" id="dvs-tN-zpD"/>
+                            <constraint firstItem="Bkq-o6-IGu" firstAttribute="top" secondItem="nRz-CX-K7i" secondAttribute="top" id="gxv-5w-HIv"/>
+                            <constraint firstItem="kNm-r9-lFT" firstAttribute="trailing" secondItem="EVI-48-1JQ" secondAttribute="trailing" id="liZ-Rv-sbC"/>
+                            <constraint firstItem="nRz-CX-K7i" firstAttribute="leading" secondItem="80f-gN-YkV" secondAttribute="leading" constant="8" id="qAc-0k-See"/>
+                            <constraint firstItem="nRz-CX-K7i" firstAttribute="top" secondItem="80f-gN-YkV" secondAttribute="top" constant="8" id="qpm-CA-yys"/>
+                            <constraint firstAttribute="trailing" secondItem="EVI-48-1JQ" secondAttribute="trailing" constant="8" id="rl3-TV-2tx"/>
+                            <constraint firstItem="EVI-48-1JQ" firstAttribute="leading" secondItem="Bkq-o6-IGu" secondAttribute="trailing" constant="8" id="zWP-OL-yB2"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="80f-gN-YkV" secondAttribute="trailing" constant="8" id="Pym-2H-WVr"/>
+                    <constraint firstItem="80f-gN-YkV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="RiE-o8-oaz"/>
+                    <constraint firstItem="80f-gN-YkV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="j0B-jB-2JY"/>
+                    <constraint firstAttribute="bottom" secondItem="80f-gN-YkV" secondAttribute="bottom" constant="8" id="oe1-Mh-Z2Y"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="clientNameLbl" destination="nRz-CX-K7i" id="Cel-GQ-fqi"/>
+                <outlet property="containerView" destination="80f-gN-YkV" id="2cX-zO-zs3"/>
+                <outlet property="deliveryReturnBtn" destination="kNm-r9-lFT" id="vXT-eE-cKh"/>
+                <outlet property="locationLbl" destination="4UC-u7-mc4" id="hUY-61-Xj0"/>
+            </connections>
+            <point key="canvasLocation" x="243.47826086956525" y="45.200892857142854"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="maps" width="612" height="792"/>
+        <image name="phone-call" width="612" height="792"/>
+        <image name="pin" width="612" height="792"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
